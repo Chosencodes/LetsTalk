@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   font-family: 'Manrope', sans-serif;
+
+   transition: .2s linear;
+    
+  
+}
+
+$black: #202020;
+$Bbackground: #131416;
+$white: #FFFFFF;
+$btnB: #4FC27E;
+$border: .1rem solid $btnB;
+$box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleSize){
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color: $black;
+}
+
+@mixin graphText($graphSize){
+    font-size: $graphSize;
+    text-transform: 2;
+    color: $light-colour;
+}
+
+body {
+    background-image: url('images/Group 1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+     /* box-shadow:0 .5rem 1rem rgba(0,0,0,.1); */ 
+
+}
+
+
+
+.navbar a{
+    color: $black;
+   margin-right: 3.6em;
+   font-size: 16px;
+
+   &:hover{
+    color: $btnB;
+   }
+}
+
+@mixin white-btn {
+    color: $white;
+    border-color: $white;
+
+    &:hover{
+        color: $white;
+    }
+
+    &::before{
+        background: $white;
+    }
+}
+
+.login-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border: $border;
+    background: $btnB;
+    color: $btnB;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    &:hover{
+    background: $btnB;
+    color: $white;
+    }
+}
+
+.btn{
+     background: $Bbackground;
+    color: $white;
+    border-radius: 34px;
+    display: inline-block;
+    padding: 1rem 1.4rem;
+    font-weight: lighter;
+    font-size: 16px;
+    text-align: center;
+    border-top-left-radius: 0; 
+    cursor: pointer;
+    font-weight: 500;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $btnB;
+        z-index: -1;
+        transition: .2s linear;
+        clip-path: circle(0% at 0% 5%);
+    }
+
+    &:hover::before{
+        clip-path: circle(100%);
+    }
+
+    &:hover{
+        color: $black;
+        
+    }
+
+}
+
+.main .circle{
+    width: 335px;
+    height: 335px;
+    border-radius: 50%;
+    background-color: #FFC247;
+    position: absolute;
+    top: 300px;
+    right: 570px;
+}
+
+.main .girl img{
+    width: 492px;
+    height: 640px;
+    position: absolute;
+    top: 250px;
+    right: 550px;
+}
+
+.text{
+    font-size: 75px;
+    color: $btnB;
+    font-weight: 100;
+    position: absolute;
+    top: 200px;
+    right: 580px;
+}
+
+.text1{
+    font-size: 75px;
+    color: #202020;
+    font-weight: 100;
+    position: absolute;
+    top: 280px;
+    right: 500px;
+}
+
+.smiley{
+    position: absolute;
+    top: 80px;
+    left: 980px;
+}
+
+.man img{
+    position: absolute;
+    top: 440px;
+    left: 120px;
+   /*  width: 179px;
+    height: 195px; */
+}
+
+.hi img{
+    position: absolute;
+    top: 300px;
+    left: 330px;
+    /* width: 81px;
+    height: 81px; */
+}
+
+.white img{
+    position: absolute;
+    top: 540px;
+    left: 800px;
+    
+}
+
+.arrow img{
+    position: absolute;
+    top: 260px;
+    left: 920px;
+    
+}
+
+.green img{
+    position: absolute;
+    top: 430px;
+    left: 70px;
+    
+}
+
+.green1 img{
+    position: absolute;
+    top: 570px;
+    left: 1350px;
+    width: 25px;
+    height: 25px;
+    
+}
+
+.white1{
+    position: absolute;
+    top: 60px;
+    left: 950px;
+}
+
+
+.white2 img{
+    position: absolute;
+    top: 220px;
+    left: 70px;
+    width: 41px;
+    height: 41px;
+}
+
+.yellow{
+    position: absolute;
+    top: 180px;
+    left: 350px;
+}
+
+.red{
+    position: absolute;
+    top: 60px;
+    left: 1100px;
+}
+
+.shadow{
+    position: absolute;
+    top: 750px;
+    left: 800px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+ }
+
+
+ @media (max-width:768px) {
+
+    
+ }
+
+ @media (max-width:320px) {
+
+    html{
+        font-size: 40%;
+    }
+    
+    
+ }
+
+
